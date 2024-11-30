@@ -86,10 +86,11 @@ exec(pythonCommand, (error, stdout, stderr) => {
 
     console.log(`Script Output: ${stdout}`);
     try {
-        //const colors = ["#FF5733", "#33FF57", "#5733FF"]; 
-       // res.json({ colors });
+        ///const colorPalette = ["#FF5733", "#33FF57", "#5733FF"]; 
+        //res.json({ colors });
         const colorPalette = JSON.parse(stdout.trim()); // Parse JSON output
-        res.json(colorPalette);
+        console.log(`Parsed Color Palette: ${colorPalette}`);
+        res.json({colorPalette});
     } catch (parseError) {
         console.error(`Parsing error: ${parseError.message}`);
         res.status(500).send("Error parsing the color palette.");

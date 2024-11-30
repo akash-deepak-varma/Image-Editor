@@ -1,4 +1,5 @@
 import sys
+import json
 import cv2
 import numpy as np
 from sklearn.cluster import KMeans
@@ -12,6 +13,6 @@ def extract_color_palette(image, n_colors=5):
     hex_colors = ['#%02x%02x%02x' % tuple(color) for color in colors]
     
     # Ensure output is printed
-    print(hex_colors)
+    print(json.dumps(hex_colors))
     sys.stdout.flush()
     return hex_colors
