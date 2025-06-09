@@ -1,5 +1,3 @@
-# README content for the CV project
-readme_content = """
 # Computer Vision Image Processing Project
 
 ## Overview
